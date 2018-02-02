@@ -1,0 +1,506 @@
+Question 1: Compare 2 integers 
+
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the first number");
+		int number1 = input.nextInt();
+
+		System.out.println("Enter the second number");
+		int number2 = input.nextInt();
+
+		if (number1 > number2) {
+			System.out.println(number1 + " is greater than " + number2);
+		} else if (number1 < number2) {
+			System.out.println(number1 + " is less than " + number2);
+
+		} else {
+			System.out.println(number1 + " is equal to " + number2);
+
+		}
+
+	}
+
+}
+
+
+Question 2: vowel or consonant
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a character");
+		char character = input.next().charAt(0);
+		if ((character >= 'a' && character <= 'z')
+				|| (character >= 'A' && character <= 'Z')) {
+			switch (character) {
+			case 'A':
+			case 'a':
+			case 'E':
+			case 'e':
+			case 'I':
+			case 'i':
+			case 'O':
+			case 'o':
+			case 'U':
+			case 'u':
+				System.out.println("Vowel");
+				break;
+			default:
+				System.out.println("Consonant");
+			}
+		} else {
+			System.out.println("Not an alphabet");
+		}
+
+	}
+
+}
+
+
+Question 3: Grade
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the marks");
+		int mark = input.nextInt();
+		
+		if(mark>100 || mark < 0 ){
+			System.out.println("Invalid Input");
+		}
+		else{
+			if(mark==100){
+				System.out.println("The student obtained a S grade");
+			}
+			else if(mark>=90){
+				System.out.println("The student obtained a A grade");
+			}
+			else if(mark>=80){
+				System.out.println("The student obtained a B grade");
+			}
+			else if(mark>=70){
+				System.out.println("The student obtained a C grade");
+			}
+			else if(mark>=60){
+				System.out.println("The student obtained a D grade");
+			}
+			else if(mark>=50){
+				System.out.println("The student obtained a E grade");
+			}
+			else{
+				System.out.println("The student obtained a F grade");
+				
+				
+			}
+		}
+	}
+}
+
+
+Question 4: Profit or Loss
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		float x;
+		float y;
+		float profitLoss;
+		System.out.println("Enter the price of a dozen mangoes");
+		x = input.nextFloat();
+		System.out.println("Enter the price at which 1 mango is being sold");
+		y = input.nextFloat();
+
+		profitLoss = 12 * y - x;
+		if (profitLoss == 0) {
+			System.out.println("No profit nor loss");
+		} else if (profitLoss > 0) {
+			System.out.println("Profit : Rs."
+					+ String.format("%.2f", profitLoss));
+		} else {
+			System.out.println("Loss : Rs."
+					+ String.format("%.2f", (-profitLoss)));
+		}
+	}
+
+}
+
+Question 5:  Fee Collection
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		String studentType;
+		float tutionFee;
+		float busFee;
+		float hostelFee;
+		float total = 0;
+
+		System.out.println("Enter the student type");
+		studentType = input.next();
+		System.out.println("Enter tuition fee");
+		tutionFee = input.nextFloat();
+		System.out.println("Enter bus fee");
+		busFee = input.nextFloat();
+		System.out.println("Enter hostel fee");
+		hostelFee = input.nextFloat();
+
+		if (studentType.equals("MSDS")) {
+			total = tutionFee + busFee;
+		} else if (studentType.equals("MSH")) {
+			total = tutionFee + hostelFee;
+		} else if (studentType.equals("MGSDS")) {
+			total = tutionFee * 1.5f + busFee;
+		} else if (studentType.equals("MGSH")) {
+			total = tutionFee * 1.5f + hostelFee;
+		} else {
+			
+		}
+		String form = String.format("%.2f", total);
+		System.out.println("The fees to be paid by the student is Rs."
+				+ form);
+
+	}
+
+}
+
+Question 6: Lab Allocation I
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter x");
+		int x = input.nextInt();
+		System.out.println("Enter y");
+		int y = input.nextInt();
+		System.out.println("Enter z");
+		int z = input.nextInt();
+		if(x <y && x < z){
+			System.out.println("L1 has the minimal seating capacity");
+		}
+		else if(y < x && y < z){
+			System.out.println("L2 has the minimal seating capacity");
+		}
+		else if(z <x  && z < y){
+			System.out.println("L3 has the minimal seating capacity");
+		}
+	}
+
+}
+
+Question 7: Lab Allocation II
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter x");
+		int x = input.nextInt();
+		System.out.println("Enter y");
+		int y = input.nextInt();
+		System.out.println("Enter z");
+		int z = input.nextInt();
+		System.out.println("Enter the lab allocated for ACE training");
+		String training = input.next();
+
+		if (training.equals("L1")) {
+			if (y < z) {
+				System.out.println("L2 has the minimal seating capacity");
+			} else {
+				System.out.println("L3 has the minimal seating capacity");
+			}
+		} else if (training.equals("L2")) {
+			if (x < z) {
+				System.out.println("L1 has the minimal seating capacity");
+			} else {
+				System.out.println("L3 has the minimal seating capacity");
+			}
+		} else if (training.equals("L3")) {
+			if (x < y) {
+				System.out.println("L1 has the minimal seating capacity");
+			} else {
+				System.out.println("L2 has the minimal seating capacity");
+			}
+		}
+	}
+
+}
+
+Question 8:  Lab Allocation III
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter x");
+		int x = input.nextInt();
+		System.out.println("Enter y");
+		int y = input.nextInt();
+		System.out.println("Enter z");
+		int z = input.nextInt();
+		System.out.println("Enter n");
+		int n = input.nextInt();
+
+		int count = 0;
+
+		if (n <= x) {
+			count++;
+		}
+		if (n <= y) {
+			count++;
+		}
+		if (n <= z) {
+			count++;
+		}
+
+		if (count > 0) {
+			System.out.println(count + " lab(s) can accommodate " + n
+					+ " students");
+		} else {
+			System.out.println("None of the labs can accommodate " + n
+					+ " students");
+
+		}
+	}
+
+}
+
+
+Question 9:  Lab Allocation IV
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter x");
+		int x = input.nextInt();
+		System.out.println("Enter y");
+		int y = input.nextInt();
+		System.out.println("Enter z");
+		int z = input.nextInt();
+		System.out.println("Enter n");
+		int n = input.nextInt();
+
+		if (n > x && n > y && n > z) {
+
+			System.out.println("None of the labs can be allocated");
+
+		}
+
+		else {
+
+			int x1 = (x - n >= 0) ? x : Integer.MAX_VALUE;
+			int y1 = (y - n >= 0) ? y : Integer.MAX_VALUE;
+			int z1 = (z - n >= 0) ? z : Integer.MAX_VALUE;
+
+			if (x1 < y1 && x1 < z1) {
+
+				System.out.println("L1 should be allocated to this class");
+
+			}
+
+			else if (y1 < z1 && y1 < x1) {
+
+				System.out.println("L2 should be allocated to this class");
+
+			}
+
+			else if (z1 < x1 && z1 < y1) {
+
+				System.out.println("L3 should be allocated to this class");
+
+			}
+		}
+
+	}
+}
+
+Question 10:  Seat Allocation I
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int r = input.nextInt();
+		System.out.println("Enter the number of columns");
+		int c = input.nextInt();
+		System.out.println("Enter the roll number of the student");
+		int s = input.nextInt();
+
+		if (s % r == 1 || s % c == 0 || s % r == 0) {
+			System.out.println("yes");
+		} else {
+			System.out.println("no");
+		}
+
+	} 
+}
+
+Question 11:  Seat Allocation II
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int r = input.nextInt();
+		System.out.println("Enter the number of columns");
+		int c = input.nextInt();
+		System.out.println("Enter the roll number of the student");
+		int s = input.nextInt();
+
+		if (s % r == 1 || s <= r || s >= ((r * c) - r)) {
+			System.out.println("yes");
+		} else {
+			System.out.println("no");
+		}
+
+	}
+}
+
+
+Question 12:  P2 Green Lights
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		float speed = input.nextFloat();
+		float distance = input.nextFloat();
+		float time = input.nextFloat();
+
+		if ((time/10.0) < ((distance / speed)*360)) {
+			System.out.println("no");
+		} else {
+			System.out.println("yes");
+		}
+		
+	}
+}
+
+Question 13:  P1 Dining
+
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		String side = input.next();
+		int rail = input.nextInt();
+
+		if (side.equals("front")) {
+			if (rail == 1) {
+				System.out.println("Left Handed");
+			} else if (rail == 2) {
+				System.out.println("Right Handed");
+			}
+		} else if (side.equals("rear")) {
+			if (rail == 2) {
+				System.out.println("Left Handed");
+			} else if (rail == 1) {
+				System.out.println("Right Handed");
+			}
+		}
+	}
+}
+
+
+Question 14: Microwave oven
+
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of items");
+		int item = input.nextInt();
+		System.out.println("Enter the single item heating time");
+		float time = input.nextFloat();
+		if (item == 1) {
+			System.out.println("The recommended heating time is "
+					+ String.format("%.2f", time));
+		} else if (item == 2) {
+			System.out.println("The recommended heating time is "
+					+ String.format("%.2f", time * 1.5));
+		} else if (item == 3) {
+			System.out.println("The recommended heating time is "
+					+ String.format("%.2f", time * 2));
+		} else if (item > 3) {
+			System.out.println("Number of items is more ");
+		}
+
+	}
+}
+
+
+Question 15: Matinee movie ticket
+
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter your age");
+		int age = in.nextInt();
+		System.out.println("Enter show timing");
+		double showTime = in.nextDouble();
+		double price = 0;
+		if (age > 13) {
+			if (showTime == 13.30) {
+				price = 5;
+			} else {
+				price = 8;
+			}
+		} else if (age <= 13 && age > 0) {
+			if (showTime == 13.30) {
+				price = 2;
+			} else {
+				price = 4;
+			}
+		}
+		String str = String.format("%.2f", price);
+		System.out.println("The ticket price is $" + str);
+	}
+
+} 

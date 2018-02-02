@@ -1,0 +1,81 @@
+Question 1:
+
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int number = input.nextInt();
+		System.out.println("Harry has to swim at " + number +" meters and must rescue "+ number +" sea maidens.");
+
+	}
+
+}
+
+Question 2:
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String string = input.next();
+		
+		System.out.println("Harry has to pick the flag that has "+ string +" in it.");
+	}
+
+}
+
+Question 3:
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Double value = input.nextDouble();
+		String string = String.format("%.2f", value);
+		System.out.println("Harry has got :\nProf.Dumbledore must get the wand worth $"+ string+".");
+	}
+
+}
+
+Question 4:
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String name = input.next(); 
+		System.out.println("Fang says :\nHagrid must choose the cracker with name \""+name+"\".");
+	}
+
+}
+Question 5:
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+			System.out.println("Word in the Trophy :");
+			String name1 = input.next();
+			
+			System.out.println("Malfoy picks the character :");
+			String name2 = input.next();
+			
+			System.out.println("Malfoy replaces the character with :");
+			String name3 = input.next();
+
+			System.out.println("Hedwig must replace "+name3+" with "+name2+" in the word "+name1+"."); 
+				
+	}
+
+}

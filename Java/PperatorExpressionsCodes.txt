@@ -1,0 +1,152 @@
+Question 1: Profit
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+			System.out.println("Enter the number of dozens of toys purchased");
+			int x = input.nextInt();
+			
+			System.out.println("Enter the price per dozen");
+			int y = input.nextInt();
+			
+			System.out.println("Enter the selling price of 1 toy");
+			int z = input.nextInt();
+			
+			double profitPercentage = ((z-(y/12.0)))/(y/12.0)*100;
+			String profitPercentageRounded = String.format("%.2f", profitPercentage);
+			System.out.println("Sam's profit percentage is "+ profitPercentageRounded  + " percent"); 
+				
+	}
+
+}
+Question 2: Time and Work
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the value of x");
+		double x = input.nextInt();
+		double a;
+		double b;
+		double total;
+		b = (3/2.0)*x;
+		a = (1/3.0)*b;
+		total = 1/((1/a)+(1/b));
+		String totalFormat = String.format("%.2f", total);  
+		System.out.println("Working together, A and B can complete the work in "+totalFormat+" days");
+	}
+
+}
+Question 3 : Average 
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of overs bowled so far");
+		int x = input.nextInt();
+		System.out.println("Enter the current run rate");
+		double y = input.nextDouble();
+		System.out.println("Enter the target score");
+		int z = input.nextInt();
+		double runRate;
+		runRate = (z - (y*x))/(50-x);
+		
+		
+		String format = String.format("%.2f", runRate);  
+		System.out.println("Required run rate is "+format);
+	}
+
+}
+
+
+Question 4: Radius of circle
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the sides of a triangle");
+		int a=input.nextInt();
+		int b=input.nextInt();
+		int c=input.nextInt();
+		double k = (a+b+c)/2.0;
+		double Radius = (float) (Math.sqrt(k*(k-a)*(k-b)*(k-c)))/k;
+				
+		String format = String.format("%.2f", Radius);  
+		System.out.println("The radius of the circle is "+format);
+	}
+
+}
+
+
+Question 5: Pogo Jump Stick
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the X and Y coordinate of friend's house");
+		int x=input.nextInt();
+		int y=input.nextInt();
+		double temp = (x-3)*(x-3)+(y-4)*(y-4);
+		double distance = Math.sqrt(temp);
+		int format = (int) Math.ceil(distance);
+		System.out.println("Raju needs "+format+" jumps");
+	}
+
+}
+
+Question 6: Discount
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Price of item 1 :");
+
+		double price1 = in.nextDouble();
+
+		System.out.println("Price of item 2 :");
+
+		double price2 = in.nextDouble();
+
+		System.out.println("Discount in percentage :");
+
+		double discountPercent = in.nextDouble();
+
+		double totalPrice = price1 + price2;
+
+		double savings = totalPrice * (discountPercent / 100);
+
+		double discountedAmount = totalPrice - savings;
+
+		String disStr = String.format("%.2f", discountedAmount);
+
+		String totStr = String.format("%.2f", totalPrice);
+
+		String savStr = String.format("%.2f", savings);
+
+		System.out.println("Total amount : $" + totStr);
+
+		System.out.println("Discounted amount : $" + disStr);
+
+		System.out.println("Saved amount : $" + savStr);
+
+	}
+
+}

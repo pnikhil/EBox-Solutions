@@ -1,0 +1,196 @@
+Question 1: Factorial Number
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		int flag = 0;
+		for (int i = 1; flag == 0 && n != 1; i++) {
+			if (n % i == 0) {
+				n = n / i;
+			} else {
+				flag = 1;
+			}
+
+		}
+		if (flag == 1) {
+			System.out.println("no");
+		} else {
+			System.out.println("yes");
+		}
+	}
+
+}
+
+Question 2: Lucus sequence
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+
+		int a = -1;
+		int b = 1;
+		int c = 1;
+		int temp;
+		
+System.out.print(a);
+		System.out.print(" " + b);
+		System.out.print(" " + c);
+		for (int i = 0; i < n - 3; i++) {
+
+			temp = a + b + c;
+			System.out.print(" " + temp);
+			a = b;
+			b = c;
+			c = temp;
+
+		}
+	}
+
+}
+
+Question 3: Fibonacci
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+
+		int a = -1;
+		int b = 1;
+		int temp = 0;
+		int flag = 0;
+		for (int i = 0; temp <= n && flag == 0; i++) {
+
+			temp = a + b;
+			a = b;
+			b = temp;
+			if (n == temp) {
+				flag = 1;
+			} else {
+				flag = 0;
+			}
+		}
+		String str = (flag == 1) ? "yes" : "no";
+		System.out.println(str);
+	}
+
+}
+Question 4: Trendy numbers
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		int num = n / 10;
+		num %= 10;
+
+		if (n >= 100 && n <= 999 && num % 3 == 0) {
+			System.out.println("Trendy Number");
+		} else {
+			System.out.println("Not a Trendy Number");
+		}
+	}
+
+}
+Question 5: Special Number
+import java.util.Scanner;                                                                                                                                                                                                  
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int m = input.nextInt();
+		int n = input.nextInt();
+		int i;
+		int j;
+		for (int k = m; k <= n; k++) {
+			i = k / 10;
+			j = k % 10;
+			if ((i * j) + (i + j) == k) {
+				System.out.print(k);
+			}
+
+		}
+	}
+}
+Question 6 : Kepraker Number
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int m = input.nextInt();
+		Long k = (long) (m * m);
+		String num = k.toString();
+		String number1 = (num.substring(0, (num.length() / 2)));
+		String number2 = (num.substring(num.length() / 2));
+
+		if (number1.length() == 0) {
+			number1 = "0";
+		}
+
+		long temp = (Long.parseLong(number1) + Long.parseLong(number2));
+		if (temp == m) {
+			System.out.println("Kaprekar Number");
+		} else {
+			System.out.println("Not A Kaprekar Number");
+		}
+
+	}
+}
+Question 7: Target practice 
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int total = input.nextInt();
+		int count = 0;
+		int temp = 0;
+		int sum = 0;
+		while (sum < total) {
+			temp = input.nextInt();
+			sum += temp;
+			count++;
+		}
+		System.out.println("The number of turns is " + count);
+
+	}
+}
+Question 8: Kid’s Homework
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(i + " ");
+			}
+			System.out.println();
+		}
+
+	}
+}
